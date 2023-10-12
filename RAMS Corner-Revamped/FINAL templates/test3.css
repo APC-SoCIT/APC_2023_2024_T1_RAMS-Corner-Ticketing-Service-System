@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   width: 100%;
 }
+
 .sidebar {
   position: fixed;
   height: 100%;
@@ -23,9 +24,9 @@ body {
   width: 60px;
 }
 
-.sidebar .logo-details {
+/* .sidebar .logo-details {
   align-items: center;
-}
+} */
 .sidebar .logo-details .profile img {
   width: 80px;
   height: 80px;
@@ -82,6 +83,19 @@ body {
   font-weight: 400;
 }
 
+.sidebar .grp-name{
+  margin-left: 60px;
+  position: absolute;
+  align-items: center;
+  bottom: -15px;
+  width: 100%;
+  transition: all 0.5ms ease;
+}
+
+.sidebar.active .sidebar .grp-name{
+  display: none;
+}
+
 /* dashboard */
 .home-section {
   background: #F6F7FB;
@@ -121,11 +135,20 @@ body {
   display: flex;
   align-items: center;
   height: 50px;
-  /* min-width: 100px; */
-  /* background: #05e0e9; */
   font-size: 30px;
 }
 
 .home-section nav .profile-details i {
-  margin: 15px; /* Add margin between the icons */
+  margin: 15px;
+}
+
+.home-contents {
+  margin:30px;
+  /* border: #05e0e9 1px solid; */
+}
+
+.home-contents .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
